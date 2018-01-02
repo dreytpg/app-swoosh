@@ -17,10 +17,10 @@
         </array>
     </customFonts>
     <scenes>
-        <!--View Controller-->
+        <!--WelcomeVC-->
         <scene sceneID="tne-QT-ifu">
             <objects>
-                <viewController id="BYZ-38-t0r" customClass="ViewController" customModule="app_swoosh" customModuleProvider="target" sceneMemberID="viewController">
+                <viewController id="BYZ-38-t0r" customClass="WelcomeVC" customModule="app_swoosh" customModuleProvider="target" sceneMemberID="viewController">
                     <view key="view" contentMode="scaleToFill" id="8bC-Xf-vdC">
                         <rect key="frame" x="0.0" y="0.0" width="375" height="667"/>
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
@@ -96,19 +96,15 @@
                         </constraints>
                         <viewLayoutGuide key="safeArea" id="6Tk-OE-BBY"/>
                     </view>
-                    <connections>
-                        <outlet property="bgImg" destination="lbF-oX-YjI" id="22E-iJ-Z7c"/>
-                        <outlet property="swoosh" destination="0Qd-9L-LyU" id="8Sc-gP-iHS"/>
-                    </connections>
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="dkx-z0-nzr" sceneMemberID="firstResponder"/>
             </objects>
             <point key="canvasLocation" x="117.59999999999999" y="118.29085457271366"/>
         </scene>
-        <!--View Controller-->
+        <!--LeagueVC-->
         <scene sceneID="aUE-Ap-BQs">
             <objects>
-                <viewController id="5yo-Xo-WrT" sceneMemberID="viewController">
+                <viewController id="5yo-Xo-WrT" customClass="LeagueVC" customModule="app_swoosh" customModuleProvider="target" sceneMemberID="viewController">
                     <view key="view" contentMode="scaleToFill" id="WoH-0F-oHt">
                         <rect key="frame" x="0.0" y="0.0" width="375" height="667"/>
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
@@ -187,6 +183,9 @@
                                 <state key="normal" title="Next">
                                     <color key="titleColor" red="0.99999600649999998" green="1" blue="1" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
                                 </state>
+                                <connections>
+                                    <action selector="onNextTapped:" destination="5yo-Xo-WrT" eventType="touchUpInside" id="uZQ-Lv-RyZ"/>
+                                </connections>
                             </button>
                             <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="R8B-YX-2IP">
                                 <rect key="frame" x="20" y="10" width="29" height="24"/>
@@ -224,22 +223,25 @@
                         </constraints>
                         <viewLayoutGuide key="safeArea" id="1AD-P4-7HF"/>
                     </view>
+                    <connections>
+                        <segue destination="Ulx-Ut-RPf" kind="show" identifier="skillVCSegue" id="k0v-Cc-DUN"/>
+                    </connections>
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="mbV-vz-B1g" userLabel="First Responder" sceneMemberID="firstResponder"/>
                 <exit id="WLp-P1-q7F" userLabel="Exit" sceneMemberID="exit"/>
             </objects>
             <point key="canvasLocation" x="911.20000000000005" y="118.29085457271366"/>
         </scene>
-        <!--View Controller-->
+        <!--SkillVC-->
         <scene sceneID="wpy-aJ-OM6">
             <objects>
-                <viewController id="Ulx-Ut-RPf" sceneMemberID="viewController">
+                <viewController id="Ulx-Ut-RPf" customClass="SkillVC" customModule="app_swoosh" customModuleProvider="target" sceneMemberID="viewController">
                     <view key="view" contentMode="scaleToFill" id="ddm-f2-Imz">
                         <rect key="frame" x="0.0" y="0.0" width="375" height="667"/>
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
                         <subviews>
-                            <imageView userInteractionEnabled="NO" contentMode="scaleAspectFill" horizontalHuggingPriority="251" verticalHuggingPriority="251" image="beginnerBallerBG" translatesAutoresizingMaskIntoConstraints="NO" id="PRz-Te-9vE">
-                                <rect key="frame" x="0.0" y="20" width="375" height="647"/>
+                            <imageView userInteractionEnabled="NO" contentMode="scaleAspectFill" horizontalHuggingPriority="251" verticalHuggingPriority="251" misplaced="YES" image="beginnerBallerBG" translatesAutoresizingMaskIntoConstraints="NO" id="PRz-Te-9vE">
+                                <rect key="frame" x="0.0" y="10" width="375" height="647"/>
                             </imageView>
                             <stackView opaque="NO" contentMode="scaleToFill" axis="vertical" alignment="center" spacing="34" translatesAutoresizingMaskIntoConstraints="NO" id="ObB-Ix-hP1">
                                 <rect key="frame" x="20" y="40" width="335" height="74"/>
